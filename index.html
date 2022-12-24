@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>Javascript - Copy to Clipboard</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		background: rgb(0,0,0);
+		background: linear-gradient(178deg, rgba(0,0,0,1) 0%, rgba(103,17,93,1) 0%, rgba(134,22,121,1) 100%);
+        );
+      }
+
+      input,
+      button {
+        font-size: 25px;
+        border-radius: 10px;
+        border: none;
+        padding: 20px;
+      }
+
+      input {
+        background-color: #d4e8ff;
+        color: #06224a;
+        width: 300px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        margin-left: 10px;
+        background-color: #06224a;
+        color: white;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #010d1f;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+	<table>
+	<thead>
+	<tr><th colspan="2"><h1>Mão ou Pé</h1></th></tr>
+	</thead>
+	<tr>
+	<td>
+	
+    <input
+      type="text"
+      name="Mão ou Pé"
+      id="01"
+      readonly
+      placeholder="Digite alguma coisa"
+      value="PIX 1"
+    />
+    <button onclick="copiarTexto1()">Copiar</button>
+
+    <script>
+      function copiarTexto1() {
+        let textoCopiado = document.getElementById("01");
+        textoCopiado.select();
+        textoCopiado.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("O código PIX (Mão ou Pé) foi copiado");
+      }
+    </script>
+
+    <div class="footer" id="footer"></div>
+    <script src="footer.js"></script>
+	</td>
+	</tr>
+	
+	<thead>
+	<tr><th colspan="2">Mão e Pé</th></tr>
+	</thead>
+	<tr>
+	<td>
+	
+    <input
+      type="text"
+      name="Mão e Pé"
+      id="02"
+      readonly
+      placeholder="Digite alguma coisa"
+      value="PIX 2"
+    />
+    <button onclick="copiarTexto2()">Copiar</button>
+
+    <script>
+      function copiarTexto2() {
+        let textoCopiado = document.getElementById("02");
+        textoCopiado.select();
+        textoCopiado.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("O código PIX (Mão e Pé) foi copiado");
+      }
+    </script>
+
+    <div class="footer" id="footer"></div>
+    <script src="footer.js"></script>
+	</td>
+	</tr>
+	</table>
+	
+</html>
